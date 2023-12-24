@@ -1,0 +1,48 @@
+Ques:5Explain the z-index, with a code example.
+Ans:5 Z Index (z-index) is a CSS property that defines the order of overlapping HTML elements. 
+Elements with a higher index will be placed on top of elements with a lower index.
+
+Html code:-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="5.css" />
+</head>
+<body>
+    <div class="container">
+    <div class="box box__1">z-index 1</div>
+    <div class="box box__2">z-index 2</div>
+    <div class="box box__3">z-index 3</div>
+    </div>
+    </body>
+</html>
+
+Css code:-
+
+.container {
+    position: relative;
+    }
+    .box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    }
+    .box__1 {
+    background-color: yellow;
+    }
+    .box__2 {
+    left: 50px;
+    top: 50px;
+    background-color: pink;
+    z-index: 1;
+    }
+    .box__3 {
+    left: 100px;
+    top: 100px;
+    background-color: rgb(0, 126, 128);
+    }
